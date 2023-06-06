@@ -76,6 +76,8 @@ public class SecurityConfig{
     		.exceptionHandling().authenticationEntryPoint(handler).and()
     		.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS).and()
     		.authorizeRequests()
+    		.requestMatchers(HttpMethod.GET, "/posts")
+    		.permitAll()
     		.requestMatchers("/auth/**")
     		.permitAll()
     		.anyRequest().authenticated();
