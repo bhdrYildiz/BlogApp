@@ -1,6 +1,7 @@
 package com.deneme.SpringBoot.services;
 
 import java.util.List;
+
 import java.util.Optional;
 
 import org.springframework.stereotype.Service;
@@ -44,6 +45,10 @@ public class UserService {
 	public void deleteUserbyId(Long userId) {
 		userRepository.deleteById(userId);
 		
+	}
+
+	public User getOneUserByUserName(String userName) {
+		return userRepository.findByUserName(userName);
 	}
 	
 	

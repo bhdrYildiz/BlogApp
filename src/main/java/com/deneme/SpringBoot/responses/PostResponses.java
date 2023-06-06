@@ -6,8 +6,6 @@ import java.util.List;
 
 import com.deneme.SpringBoot.entities.Like;
 
-
-
 public class PostResponses {
 	
 	Long id;
@@ -15,7 +13,6 @@ public class PostResponses {
 	String userName;
 	String title;
 	String text;
-	List<Like> postLikes;
 	
 	public PostResponses(Post entity) {
 		this.id = entity.getId();
@@ -24,8 +21,6 @@ public class PostResponses {
 		this.title = entity.getTitle();
 		this.text = entity.getText();
 	}
-	
-	
 	
 	public Long getId() {
 		return id;

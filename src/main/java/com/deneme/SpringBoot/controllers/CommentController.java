@@ -47,7 +47,7 @@ public class CommentController {
 		return commentService.updateComment(commentId,updateComment);
 	}
 	
-	@PostMapping("delete /{commentId")
+	@PostMapping("delete /{commentId}")
 	public String deleteComment(@PathVariable Long commentId) {
 		commentService.deleteComment(commentId);
 		return "Comment Deleted !";
